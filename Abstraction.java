@@ -1,23 +1,28 @@
 package jawad;
 
-public abstract class Car {
-   public abstract void start();
-   public abstract void stop();
+	abstract class Car {
+	public abstract void start();
+	public abstract void stop();
+	
 }
 
-public class Sedan extends Car {
-   public void start() {
-      System.out.println("Sedan started.");
-   }
-   public void stop() {
-      System.out.println("Sedan stopped.");
-   }
+
+	class Bmw extends Car {
+	public void start() {
+		System.out.println("The BMW Started");
+	}
+	
+	public void stop() {
+		System.out.println("The BMW Stoped");
+	}
 }
 
-public class Main {
-   public static void main(String[] args) {
-      Car myCar = new Sedan();
-      myCar.start();
-      myCar.stop();
-   }
+// You should write the class name as the same to your file name
+	class Main{
+	public static void main(String[] args) {
+		Car obj = new Bmw();
+		
+		obj.start();
+		obj.stop();
+	}
 }
